@@ -1,0 +1,1 @@
+select a.Score, cast(a.Rank as unsigned) Rank from (select Score, (@i:=case when @pre=Score then @i else @i+1 end) Rank, (@pre:=Score) from Scores, (select @i:=0, @pre:=-1) init order by Score desc) a

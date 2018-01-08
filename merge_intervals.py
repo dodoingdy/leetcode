@@ -19,4 +19,5 @@ class Solution(object):
                 result.append(gg)
                 result.append(n)
             else:
-                result.append(Interval(min(gg.start, n.start), max(gg.end, n.end)))            return result
+                result.append(Interval(min(gg.start, n.start), max(gg.end, n.end)))
+        return result
